@@ -1,0 +1,179 @@
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style/__colors.css ***!
+  \**************************************************************************/
+/* The names of the colors are taken from the following site - https://icolorpalette.com/color */
+
+:root {
+    --fishNetBlue: #1e446e;
+    --greyOfDarkness: #a3a3a3;
+    --mercury: #ececec;
+    --titaniumWhite: #e5e5e5;
+    --gainsboro: #dcdcdc;
+    --titaniumWhite: #e5e5e5;
+    --black: #000000;
+    --white: #ffffff;
+    --red: #ff0000;
+}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/molecules/CurrenciesSelection/currenciesSelection.css ***!
+  \*************************************************************************************************************/
+.currencies-selection-container {
+    border: 1px solid var(--greyOfDarkness);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    min-height: 200px;
+    max-width: 410px;
+    min-width: 410px;
+    padding: 20px 15px 15px 15px;
+}
+
+.currencies-selection-container__selected {
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.currencies-selection-container__list {
+    gap: 7px;
+}
+
+.currencies-selection-container__list, .currencies-selection-container__selected {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    row-gap: 15px;
+}
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/atoms/Chip/chip.css ***!
+  \***************************************************************************/
+.chip-container {
+  min-width: 120px;
+  min-height: 30px;
+  max-width: 120px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--fishNetBlue);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  font-family: monospace, sans-serif;
+}
+
+.chip-container.chip--primary {
+  border: 1px solid var(--greyOfDarkness);
+  background-color: var(--mercury);
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.chip-container.chip--secondary {
+  font-size: 15px;
+  color: var(--black);
+  justify-content: center;
+  background-color: var(--titaniumWhite);
+  border-radius: 2px;
+}
+
+.chip-container.chip--primary:hover:not(.chip--selected) {
+  background-color: var(--gainsboro);
+}
+
+.chip-container.chip--selected {
+  background-color: var(--white);
+}
+
+.chip-container__select-mark {
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  border: 1px solid var(--greyOfDarkness);
+  border-radius: 3px;
+  margin-right: 5px;
+  position: relative;
+  text-transform: lowercase;
+  color: var(--red);
+  line-height: 9px;
+  font-family: monospace, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chip--selected .chip-container__select-mark:after {
+  display: inline-block;
+  content: "\00d7";
+}
+
+.chip-container__cancel {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.chip-container__cancel-circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--black);
+  border-radius: 11px;
+  left: -2px;
+  top: -2px;
+  border: 2px solid var(--white);
+}
+
+.chip-container__cancel:hover .chip-container__cancel-circle {
+  background-color: var(--white);
+  border-color: var(--black);
+}
+
+.chip-container__cancel:hover .chip-container__cancel-stem,
+.chip-container__cancel:hover .chip-container__cancel-stem2 {
+  background-color: var(--black);
+}
+
+
+.chip-container__cancel-stem,
+.chip-container__cancel-stem2 {
+  position: absolute;
+  background-color: var(--white);
+  top: 55%;
+  left: 55%;
+  transform: translate(-55%, -55%);
+}
+
+.chip-container__cancel-stem {
+  width: 2px;
+  height: 10px;
+  rotate: 353deg;
+}
+
+.chip-container__cancel-stem2 {
+  width: 10px;
+  height: 2px;
+  rotate: 6deg;
+}
+
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style/global.css ***!
+  \************************************************************************/
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.dialog {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
