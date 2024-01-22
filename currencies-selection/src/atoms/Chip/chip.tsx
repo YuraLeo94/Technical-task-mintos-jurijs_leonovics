@@ -18,6 +18,7 @@ const Chip: React.FC<ChipProps> = (props: ChipProps) => {
     }, [currency]);
 
     const onChipClick = () => {
+        console.log('onChipClick');
         setSelected(!selected);
         if (!selected) {
             selectCurrency?.({ ...currency, isSelected: true });
@@ -30,11 +31,10 @@ const Chip: React.FC<ChipProps> = (props: ChipProps) => {
     const onCancel = () => {
         removeSelectedCurrency?.({ ...currency, isSelected: false });
     }
-
+    console.log('isSelectable', isSelectable)
     return (
         <div
-            className={`chip-container chip--${type} 
-            ${selected && ChipType.Secondary !== type ? 'chip--selected' : ''}`}
+            className={`chip-container chip--${type} ${selected && ChipType.Secondary !== type ? 'chip--selected' : ''}`}
             onClick={isSelectable ? onChipClick : undefined}>
             {isSelectable && <span className="chip-container__select-mark"></span>}
 
