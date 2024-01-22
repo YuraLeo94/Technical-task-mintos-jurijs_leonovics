@@ -1,0 +1,23 @@
+@import '../../style/__colors.css';
+
+.currencies-selection-container {
+    border: 1px solid var(--greyOfDarkness);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    min-height: 200px;
+    max-width: 410px;
+    min-width: 410px;
+    padding: 20px 15px 15px 15px;
+}
+
+.currencies-selection-container__selected {
+    margin-bottom: 30px;
+}
+
+.currencies-selection-container__list, .currencies-selection-container__selected {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 8px;
+    row-gap: 15px;
+}
