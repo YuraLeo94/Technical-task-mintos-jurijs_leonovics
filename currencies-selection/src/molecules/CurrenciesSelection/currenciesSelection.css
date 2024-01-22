@@ -12,12 +12,16 @@
 
 .currencies-selection-container__selected {
     margin-bottom: 30px;
+    gap: 10px;
+}
+
+.currencies-selection-container__list {
+    gap: 7px;
 }
 
 .currencies-selection-container__list, .currencies-selection-container__selected {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    gap: 8px;
     row-gap: 15px;
 }
